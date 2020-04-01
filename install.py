@@ -42,14 +42,14 @@ for x in range(20,120,20):
     progress.step(100/components)
     install.update()
     try:
-        with open('mono_'+str(x)+'%.gif','r')as r:
+        with open('mono_'+str(x)+'.gif','r')as r:
             r.close()
     except:
 
-        print('#fetching component#mono_'+str(x)+'%.gif')
+        print('#fetching component#mono_'+str(x)+'.gif')
         
-        r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/mono_'+str(x)+'%.gif')
-        with open('mono_'+str(x)+'%.gif','wb')as w:
+        r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/mono_'+str(x)+'.gif')
+        with open('mono_'+str(x)+'.gif','wb')as w:
             w.write(r.read())
             w.close()
 

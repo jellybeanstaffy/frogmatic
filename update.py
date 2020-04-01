@@ -22,11 +22,11 @@ print('##fetch mono images')
 
 for x in range(20,120,20):        
     try:
-        with open('mono_'+str(x)+'%.gif','r')as r:
+        with open('mono_'+str(x)+'.gif','r')as r:
             r.close()
     except:
-        r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/mono_'+str(x)+'%.gif')
-        with open('mono_'+str(x)+'%.gif','wb')as w:
+        r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/mono_'+str(x)+'.gif')
+        with open('mono_'+str(x)+'.gif','wb')as w:
             w.write(r.read())
             w.close()
             

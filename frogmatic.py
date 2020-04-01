@@ -70,14 +70,14 @@ def position(xpos,ypos):
 def gomono():
     global frogmatic,canvas,img
     for x in range(20,120,20):
-        img = PhotoImage(file='mono_'+str(x)+'%.gif')
+        img = PhotoImage(file='mono_'+str(x)+'.gif')
         canvas.create_image(0,0, anchor=NW, image=img)
         sleep(0.1)
         frogmatic.update()
 def gounmono():
     global frogmatic,canvas,img
     for x in range(100,0,-20):
-        img = PhotoImage(file='mono_'+str(x)+'%.gif')
+        img = PhotoImage(file='mono_'+str(x)+'.gif')
         canvas.create_image(0,0, anchor=NW, image=img)
         sleep(0.1)
         frogmatic.update()

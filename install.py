@@ -112,10 +112,10 @@ with open('version.dat','wb')as w:
 progress.step(100/components)
 install.update()
 
-print('#fetching component#bibblebobble.py')
+print('#fetching component#frank.py')
 
-r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/bibblebobble.py')
-with open('bibblebobble.py','wb')as w:
+r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/frank.py')
+with open('frank.py','wb')as w:
     w.write(r.read())
     w.close()
     

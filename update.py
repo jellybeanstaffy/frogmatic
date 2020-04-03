@@ -76,10 +76,10 @@ with open('frogmatic.py','wb')as w:
     w.write(r.read())
     w.close()
     
-print('##fetch component: bibblebobble')
+print('##fetch component: frank')
 
-r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/bibblebobble.py')
-with open('bibblebobble.py','wb')as w:
+r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/frank.py')
+with open('frank.py','wb')as w:
     w.write(r.read())
     w.close()
 print('##done')

@@ -9,15 +9,24 @@ class bubble:#max 5rows and 5 columns
     global frogmatic,canvas,img
     def say(string,duration):
         global frogmatic,canvas,img
+        if duration=0:
+            children=frogmatic.winfo_children()
+            print(children)
+            for item in children:
+                if isinstance(item, Label):
+                    item.destroy()
+                    
+        frogmatic.update()
         Label(frogmatic,text=string).grid(row=0,column=0)
         frogmatic.update()
-        sleep(duration)
-        children=frogmatic.winfo_children()
-        print(children)
-        for item in children:
-            if isinstance(item, Label):
-                item.destroy()
-        frogmatic.update()
+        if duration != 0:
+            sleep(duration)
+            children=frogmatic.winfo_children()
+            print(children)
+            for item in children:
+                if isinstance(item, Label):
+                    item.destroy()
+            frogmatic.update()
 
 
 

@@ -9,7 +9,7 @@ import frank
 #from bibblebobble import speechbubble
 
 def setup():
-    frank.appear(1,90,90)
+    frank.appear(1,100,100)
     frank.setsprite('searchingwifi.gif')
     try:
         urllib.request.urlopen('https://github.com')
@@ -19,7 +19,7 @@ def setup():
         messagebox.showerror('oops...','unable to connect')
         frank.disappear(1)
         exit()
-    frank.appear(3,90,90)
+    frank.appear(3,100,100)
     frank.gomono()
     try:
         r=urllib.request.urlopen('https://raw.githubusercontent.com/jellybeanstaffy/frogmatic/frogmatic/update.py')
@@ -29,6 +29,7 @@ def setup():
         sleep(1)
         with open('install.dat','r')as r:
                 exec(r.read())
+                r.close()
         #print('updater temporarily disabled to prevent changes from self destructing :)')
     except:
         print('err:update failed')
@@ -42,7 +43,7 @@ def setup():
             messagebox.showerror('oops...','unable to connect')
             frank.disappear(1)
     frank.gounmono()
-
+    frank.bubble.say('experimental speech',5)
 
 
     #sleep(5)
